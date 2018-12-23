@@ -1,11 +1,97 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/user/register",
+			"style": {
+				"bz": "1.练考赛辅助系统APP-登录页",
+				"navigationBarTitleText": " ",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+		}, {
+			"path": "pages/user/basic_information",
+			"style": {
+				"bz": "1.练考赛辅助系统APP-登录页",
+				"navigationBarTitleText": "完善基本信息",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		}, {
+			"path": "pages/user/privacy_policy",
+			"style": {
+				"bz": "1.练考赛辅助系统APP-登录页",
+				"navigationBarTitleText": "用户协议及隐私政策",
+				"backgroundColor": "#FFFFFF",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		}, {
+			"path": "pages/ranking/index",
+			"style": {
+				"bz": "3.3练考赛辅助系统APP-成绩排行",
+				"navigationBarTitleText": " ",
+				"app-plus": {
+					"titleNView": "false"
+				}
+			}
+		}, {
+			"path": "pages/independent_study/index",
+			"style": {
+				"bz": "3.2练考赛辅助系统APP-自主学习",
+				"navigationBarTitleText": "自主学习",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent",
+						"buttons": [ //原生标题栏按钮配置,
+							{
+								"text": "\ue60c",
+								"fontSize": "24",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+			}
+		}, {
+			"path": "pages/practice/index",
+			"style": {
+				"bz": "3.1练考赛辅助系统APP-练一练",
+				"navigationBarTitleText": "亿学杯练考赛"
+			}
+		}, {
+			"path": "pages/index",
+			"style": {
+				"bz": "2.练考赛辅助系统APP-首页",
+				"app-plus": {
+					"bounce": "none", //关闭窗口回弹效果
+					"titleNView": {
+						"buttons": [ //原生标题栏按钮配置,
+							{
+								"text": "\ue623",
+								"fontSize": "24",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							},
+							{
+								"text": "\ue61c",
+								"fontSize": "22",
+								"float": "left",
+								"fontSrc": "static/fonts/iconfont.ttf"
+							}
+						]
+					}
+				}
+
+			}
+		}, {
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "slide-view",
 				"usingComponents": {
-					 "van-toast": "/wxcomponents/toast/index",
+					"van-toast": "/wxcomponents/toast/index",
 					"van-row": "/wxcomponents/row/index",
 					"van-col": "/wxcomponents/col/index",
 					"van-button": "/wxcomponents/button/index"
@@ -14,9 +100,34 @@
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTitleText": "亿学实训平台",
+		"navigationBarBackgroundColor": "#0D68C1",
+		"backgroundColor": "#0D68C1"
+	},
+	"tabBar": {
+		"color": "#666666",
+		"selectedColor": "#4da9ff",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/practice/index",
+			"iconPath": "static/img/bottom/dsfda_a.png",
+			"selectedIconPath": "static/img/bottom/dsfdb_a.png",
+			"text": "练一练"
+		}, {
+			"pagePath": "pages/independent_study/index",
+			"iconPath": "static/img/bottom/dsfda_b.png",
+			"selectedIconPath": "static/img/bottom/dsfdb_b.png",
+			"text": "自主学习"
+		}, {
+			"pagePath": "pages/ranking/index",
+			"iconPath": "static/img/bottom/dsfda_c.png",
+			"selectedIconPath": "static/img/bottom/dsfdb_c.png",
+			"text": "成绩•排行"
+		}, {
+			"pagePath": "pages/user/index",
+			"iconPath": "static/img/bottom/dsfda_d.png",
+			"selectedIconPath": "static/img/bottom/dsfdb_d.png",
+			"text": "个人中心"
+		}]
 	}
 }
